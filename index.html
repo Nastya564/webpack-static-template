@@ -1,13 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Webpack 4 Starter</title>
-<link href="style.css" rel="stylesheet"></head>
-<body>
-<img src="./img/webpack.svg" alt="Webpack Logo" width="200px">
-<h3>Welcome to Webpack 4 starter </h3>
-<script type="text/javascript" src="./js/bundle.js"></script></body>
+    <title>WebpackPlugin</title>
+  <link href="style.css" rel="stylesheet"></head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__left-column">
+          <button class="header__btn-menu header-element">
+            <img src="./img/burger.svg" alt="Меню">
+          </button>
+          <div class="header__line-one header-element">
+            <img src="./img/divider.svg" alt="#">
+          </div>
+          <a class="header__logo header-element" href="#">
+            <img src="./img/Group.svg" alt="CPS">
+          </a>
+        </div>
+        <div class="header__right-column">
+          <button class="header__btn-call header-element">
+            <img src="./img/call.svg" alt="Заказать звонок">
+          </button>
+          <button class="header__btn-chat header-element">
+            <img src="./img/chat.svg" alt="Обратная связь">
+          </button>
+          <button class="header__btn-profile header-element">
+            <img src="./img/profile.svg" alt="Профиль">
+          </button>
+          <div class="header__line-two header-element">
+            <img src="./img/divider.svg" alt="#">
+          </div>
+          <button class="header__btn-repair header-element">
+            <img src="./img/repair.svg" alt="Оставить заявку">
+          </button>
+          <button class="header__btn-checkstatus header-element">
+            <img src="./img/checkstatus.svg" alt="Статус ремонта">
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="main">
+      <div class="main__container">
+        <h1 class="main__title">Услуги и сервисы</h1>
+        <div class="main__menu">
+          <button class="main__menu-brands btn-menu">
+            Ремонтируемые бренды
+          </button>
+          <button class="main__menu-devices btn-menu">
+            Ремонтируемые устройства
+          </button>
+          <button class="main__menu-prices btn-menu">Цены на услуги</button>
+          <button class="main__menu-address btn-menu">
+            Адреса сервисных центров
+          </button>
+          <button class="main__menu-special-price btn-menu">
+            Специальные цены
+          </button>
+          <button class="main__menu-reviews btn-menu">Отзывы</button>
+        </div>
+        <div class="main__info">
+          <div class="main__container-text">
+            <p class="main__info-text">
+              Мы являемся авторизованным сервисным центром по ремонту техники
+              Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+              официальной гарантией производителя.<br><br>Мы успешно
+              работаем с 1992 года и заслужили репутацию надежного партнера, что
+              подтверждает большое количество постоянных клиентов. Мы гордимся
+              тем, что к нам обращаются по рекомендациям и, в свою очередь,
+              советуют нас родным и близким.<br><br>Lorem ipsum dolor sit
+              amet consectetur, adipisicing elit. Unde excepturi facilis
+              corrupti perspiciatis praesentium. Itaque quidem voluptas neque
+              soluta voluptatem nisi ea quia quaerat veritatis eum, ut possimus
+              quis saepe reiciendis aut eos ipsam quos, accusamus totam dolor
+              deserunt consequuntur incidunt illo natus! In molestias quasi nam
+              placeat iusto! Culpa?
+            </p>
+            <div class="conteiner-btn-read-more">
+              <img class="btn-read-more-svg" id="btn-read-more-svg" src="./img/expand.svg" alt="more">
+              <button class="main__info-btn-read-more" id="btn-read-more">
+                Читать далее
+              </button>
+            </div>
+          </div>
+          <img class="main__info-picture" src="./img/cps.png">
+        </div>
+      </div>
+    </div>
+  <script type="text/javascript" src="./js/bundle.js"></script></body>
 </html>
