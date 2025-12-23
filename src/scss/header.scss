@@ -4,7 +4,7 @@
   align-items: center;
   min-width: 320px;
   min-height: 88px;
-  background-color: $bgElemColor;
+  background-color: #fff;
   padding-right: 24px;
   padding-left: 8px;
   border-bottom: 1px solid rgba(65, 246, 215, 0.3);
@@ -21,4 +21,25 @@
   border: none;
   margin-left: 16px;
   padding: 0;
+}
+
+@media (min-width: 1020px) {
+  .header {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .header__line-one,
+  .header__btn-call,
+  .header__btn-chat,
+  .header__btn-profile {
+    display: none;
+  }
+
+  .header__container {
+    padding: 0;
+    padding-right: 16px;
+    min-width: 220px;
+  }
 }

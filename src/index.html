@@ -7,9 +7,14 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <title>WebpackPlugin</title>
   </head>
   <body>
+    <!-- Шапка на планшете/телефоне -->
     <header class="header">
       <div class="header__container">
         <div class="header__left-column">
@@ -45,9 +50,19 @@
         </div>
       </div>
     </header>
+
+    <!-- Услуги и сервисы -->
     <div class="main">
       <div class="main__container">
-        <h1 class="main__title">Услуги и сервисы</h1>
+        <div class="main__header">
+          <h1 class="main__title">Услуги и сервисы</h1>
+          <div class="main__header-submit">Оставить заявку
+            <img src="./img/repair.svg" alt="Заявка">
+          </div>
+          <div class="main__header-status">Статус ремонта
+            <img src="./img/checkstatus.svg" alt="Статус">
+          </div>
+        </div>
         <div class="main__menu">
           <button class="main__menu-brands btn-menu">
             Ремонтируемые бренды
@@ -97,5 +112,574 @@
         </div>
       </div>
     </div>
+
+    <!-- Бренды -->
+    <header class="header-block">
+      <h2>Ремонт техники различных брендов</h2>
+    </header>
+    <section class="brands-section">
+      <div class="brands-container">
+        <!-- Десктопная/планшетная версия -->
+        <div class="brands-grid desktop-layout">
+          <div class="brand-item">
+            <div class="placeholder">
+              <img src="./img/brands/Lenovo.png" alt="Lenovo" />
+              <button>
+                <img src="./img/go.svg" alt="Подробнее" />
+              </button>
+            </div>
+          </div>
+          <div class="brand-item">
+            <div class="placeholder">
+              <img src="./img/brands/Samsung.png" alt="Samsung" />
+              <button>
+                <img src="./img/go.svg" alt="Подробнее" />
+              </button>
+            </div>
+          </div>
+          <div class="brand-item">
+            <div class="placeholder">
+              <img src="./img/brands/Apple.png" alt="Apple" />
+              <button>
+                <img src="./img/go.svg" alt="Подробнее" />
+              </button>
+            </div>
+          </div>
+          <div class="brand-item">
+            <div class="placeholder">
+              <img src="./img/brands/Bosch.png" alt="Bosch" />
+              <button>
+                <img src="./img/go.svg" alt="Подробнее" />
+              </button>
+            </div>
+          </div>
+          <div class="brand-item">
+            <div class="placeholder">
+              <img src="./img/brands/HP.png" alt="HP" />
+              <button>
+                <img src="./img/go.svg" alt="Подробнее" />
+              </button>
+            </div>
+          </div>
+          <div class="brand-item">
+            <div class="placeholder">
+              <img src="./img/brands/Acer.png" alt="Acer" />
+              <button>
+                <img src="./img/go.svg" alt="Подробнее" />
+              </button>
+            </div>
+          </div>
+          <div class="brand-item">
+            <div class="placeholder">
+              <img src="./img/brands/ViewSonic.png" alt="ViewSonic" />
+              <button>
+                <img src="./img/go.svg" alt="Подробнее" />
+              </button>
+            </div>
+          </div>
+          <div class="brand-item">
+            <div class="placeholder">
+              <img src="./img/brands/Sony.png" alt="Sony" />
+              <button>
+                <img src="./img/go.svg" alt="Подробнее" />
+              </button>
+            </div>
+          </div>
+          <div class="brand-item">
+            <div class="placeholder">
+              <img src="./img/brands/Lenovo.png" alt="Lenovo" />
+              <button>
+                <img src="./img/go.svg" alt="Подробнее" />
+              </button>
+            </div>
+          </div>
+          <div class="brand-item">
+            <div class="placeholder">
+              <img src="./img/brands/Samsung.png" alt="Samsung" />
+              <button>
+                <img src="./img/go.svg" alt="Подробнее" />
+              </button>
+            </div>
+          </div>
+          <div class="brand-item">
+            <div class="placeholder">
+              <img src="./img/brands/Apple.png" alt="Apple" />
+              <button>
+                <img src="./img/go.svg" alt="Подробнее" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Мобильная версия Swiper -->
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="placeholder">
+                <img src="./img/brands/Lenovo.png" alt="Lenovo" />
+                <button>
+                  <img src="./img/go.svg" alt="Подробнее" />
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="placeholder">
+                <img src="./img/brands/Samsung.png" alt="Samsung" />
+                <button>
+                  <img src="./img/go.svg" alt="Подробнее" />
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="placeholder">
+                <img src="./img/brands/Apple.png" alt="Apple" />
+                <button>
+                  <img src="./img/go.svg" alt="Подробнее" />
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="placeholder">
+                <img src="./img/brands/Bosch.png" alt="Bosch" />
+                <button>
+                  <img src="./img/go.svg" alt="Подробнее" />
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="placeholder">
+                <img src="./img/brands/HP.png" alt="HP" />
+                <button>
+                  <img src="./img/go.svg" alt="Подробнее" />
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="placeholder">
+                <img src="./img/brands/HP.png" alt="HP" />
+                <button>
+                  <img src="./img/go.svg" alt="Подробнее" />
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="placeholder">
+                <img src="./img/brands/Acer.png" alt="Acer" />
+                <button>
+                  <img src="./img/go.svg" alt="Подробнее" />
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="placeholder">
+                <img src="./img/brands/ViewSonic.png" alt="ViewSonic" />
+                <button>
+                  <img src="./img/go.svg" alt="Подробнее" />
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="placeholder">
+                <img src="./img/brands/Sony.png" alt="Sony" />
+                <button>
+                  <img src="./img/go.svg" alt="Подробнее" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="show-all">
+        <img
+          class="btn-show-all-svg"
+          id="btn-show-all-svg"
+          src="./img/expand.svg"
+          alt="more"
+        />
+        <button class="show-all-btn" id="show-all-btn">Показать все</button>
+      </div>
+    </section>
+
+    <!-- Виды техники -->
+    <header class="header-block">
+      <h2>Ремонт различных видов техники</h2>
+    </header>
+    <section class="repair-section">
+      <div class="repair-container">
+        <!-- Десктопная/планшетная версия -->
+        <div class="repair-grid desktop-layout" id="repair-grid">
+          <div class="repair-item">
+            <div class="placeholder-repair">
+              <p class="placeholder-repair__text">Ремонт ноутбуков</p>
+              <button class="repair-btn-more">
+                <img src="./img/go.svg" alt="Подробнее" />
+              </button>
+            </div>
+          </div>
+          <div class="repair-item">
+            <div class="placeholder-repair">
+              <p class="placeholder-repair__text">Ремонт планшетов</p>
+              <button class="repair-btn-more">
+                <img src="./img/go.svg" alt="Подробнее" />
+              </button>
+            </div>
+          </div>
+          <div class="repair-item">
+            <div class="placeholder-repair">
+              <p class="placeholder-repair__text">Ремонт ПК</p>
+              <button class="repair-btn-more">
+                <img src="./img/go.svg" alt="Подробнее" />
+              </button>
+            </div>
+          </div>
+          <div class="repair-item">
+            <div class="placeholder-repair">
+              <p class="placeholder-repair__text">Ремонт мониторов</p>
+              <button class="repair-btn-more">
+                <img src="./img/go.svg" alt="Подробнее" />
+              </button>
+            </div>
+          </div>
+          <div class="repair-item">
+            <div class="placeholder-repair">
+              <p class="placeholder-repair__text">Ремонт ноутбуков</p>
+              <button class="repair-btn-more">
+                <img src="./img/go.svg" alt="Подробнее" />
+              </button>
+            </div>
+          </div>
+          <div class="repair-item">
+            <div class="placeholder-repair">
+              <p class="placeholder-repair__text">Ремонт планшетов</p>
+              <button class="repair-btn-more">
+                <img src="./img/go.svg" alt="Подробнее" />
+              </button>
+            </div>
+          </div>
+          <div class="repair-item">
+            <div class="placeholder-repair">
+              <p class="placeholder-repair__text">Ремонт ПК</p>
+              <button class="repair-btn-more">
+                <img src="./img/go.svg" alt="Подробнее" />
+              </button>
+            </div>
+          </div>
+          <div class="repair-item">
+            <div class="placeholder-repair">
+              <p class="placeholder-repair__text">Ремонт мониторов</p>
+              <button class="repair-btn-more">
+                <img src="./img/go.svg" alt="Подробнее" />
+              </button>
+            </div>
+          </div>
+          <div class="repair-item">
+            <div class="placeholder-repair">
+              <p class="placeholder-repair__text">Ремонт ноутбуков</p>
+              <button class="repair-btn-more">
+                <img src="./img/go.svg" alt="Подробнее" />
+              </button>
+            </div>
+          </div>
+          <div class="repair-item">
+            <div class="placeholder-repair">
+              <p class="placeholder-repair__text">Ремонт планшетов</p>
+              <button class="repair-btn-more">
+                <img src="./img/go.svg" alt="Подробнее" />
+              </button>
+            </div>
+          </div>
+          <div class="repair-item">
+            <div class="placeholder-repair">
+              <p class="placeholder-repair__text">Ремонт ПК</p>
+              <button class="repair-btn-more">
+                <img src="./img/go.svg" alt="Подробнее" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Мобильная версия Swiper -->
+        <div class="swiper-container swiper-container-repair">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide-repair">
+              <div class="placeholder-repair">
+                <p class="placeholder-repair__text">Ремонт ноутбуков</p>
+                <button class="repair-btn-more">
+                  <img src="./img/go.svg" alt="Подробнее" />
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-repair">
+              <div class="placeholder-repair">
+                <p class="placeholder-repair__text">Ремонт планшетов</p>
+                <button class="repair-btn-more">
+                  <img src="./img/go.svg" alt="Подробнее" />
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-repair">
+              <div class="placeholder-repair">
+                <p class="placeholder-repair__text">Ремонт ПК</p>
+                <button class="repair-btn-more">
+                  <img src="./img/go.svg" alt="Подробнее" />
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-repair">
+              <div class="placeholder-repair">
+                <p class="placeholder-repair__text">Ремонт мониторов</p>
+                <button class="repair-btn-more">
+                  <img src="./img/go.svg" alt="Подробнее" />
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-repair">
+              <div class="placeholder-repair">
+                <p class="placeholder-repair__text">Ремонт ноутбук</p>
+                <button class="repair-btn-more">
+                  <img src="./img/go.svg" alt="Подробнее" />
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-repair">
+              <div class="placeholder-repair">
+                <p class="placeholder-repair__text">Ремонт планшетов</p>
+                <button class="repair-btn-more">
+                  <img src="./img/go.svg" alt="Подробнее" />
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-repair">
+              <div class="placeholder-repair">
+                <p class="placeholder-repair__text">Ремонт ПК</p>
+                <button class="repair-btn-more">
+                  <img src="./img/go.svg" alt="Подробнее" />
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-repair">
+              <div class="placeholder-repair">
+                <p class="placeholder-repair__text">Ремонт мониторов</p>
+                <button class="repair-btn-more">
+                  <img src="./img/go.svg" alt="Подробнее" />
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-repair">
+              <div class="placeholder-repair">
+                <p class="placeholder-repair__text">Ремонт ноутбуков</p>
+                <button class="repair-btn-more">
+                  <img src="./img/go.svg" alt="Подробнее" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="show-all">
+        <img
+          class="btn-show-all-svg"
+          id="btn-show-all-repair-svg"
+          src="./img/expand.svg"
+          alt="more"
+        />
+        <button class="show-all-btn" id="show-all-repair-btn"
+          >Показать все</button
+        >
+      </div>
+    </section>
+
+    <!--Цены на услуги -->
+    <header class="header-block">
+      <h2>Цены на услуги</h2>
+    </header>
+    <section class="price-section">
+      <div class="price-container">
+        <!-- Десктопная/планшетная версия -->
+        <div class="price-grid desktop-layout" id="price-grid">
+
+            <div class="price-header">
+      <p class="price-header__col">Ремонтные услуги</p>
+      <p class="price-header__col">Цена</p>
+      <p class="price-header__col">Срок</p>
+      <p class="price-header__col"></p> <!-- под кнопку -->
+    </div>
+
+          <div class="price-item">
+            <div class="placeholder-price">
+              <p class="price-title__text price-title__text-one">Диагностика</p>   
+              <p class="price-title__text price-title__text-two">Бесплатно</p>
+              <p class="price-title__text price-title__text-three">30 мин</p>
+              <button class="price-btn-order">
+                 <img src="./img/Order.svg" alt="Заказать" />
+              </button>
+            </div>
+          </div>
+          <div class="price-item">
+            <div class="placeholder-price">
+              <p class="price-title__text price-title__text-one">Замена дисплея</p>   
+              <p class="price-title__text price-title__text-two">1000 Р</p>
+              <p class="price-title__text price-title__text-three">30-120 мин</p>
+              <button class="price-btn-order">
+                 <img src="./img/Order.svg" alt="Заказать" />
+              </button>
+            </div>
+          </div>
+          <div class="price-item">
+            <div class="placeholder-price">
+              <p class="price-title__text price-title__text-one">Замена полифонического динамика</p>   
+              <p class="price-title__text price-title__text-two">1000 Р</p>
+              <p class="price-title__text price-title__text-three">30-120 мин</p>
+              <button class="price-btn-order">
+                 <img src="./img/Order.svg" alt="Заказать" />
+              </button>
+            </div>
+          </div>
+          <div class="price-item">
+            <div class="placeholder-price">
+              <p class="price-title__text price-title__text-one">Тестирование с выдачей технического заключения</p>   
+              <p class="price-title__text price-title__text-two">1000 Р</p>
+              <p class="price-title__text price-title__text-three">30-120 мин</p>
+              <button class="price-btn-order">
+                 <img src="./img/Order.svg" alt="Заказать" />
+              </button>
+            </div>
+          </div>
+          <div class="price-item">
+            <div class="placeholder-price">
+              <p class="price-title__text price-title__text-one">Замена программного обеспечения</p>   
+              <p class="price-title__text price-title__text-two">1000 Р</p>
+              <p class="price-title__text price-title__text-three">30-120 мин</p>
+              <button class="price-btn-order">
+                 <img src="./img/Order.svg" alt="Заказать" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Мобильная версия Swiper -->
+        <div class="swiper-container swiper-container-price">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide-price">
+              <div class="placeholder-price-mobile">
+                <p class="price-title">Ремонтные услуги
+                  <p class="price-title__text">Тестирование с выдачей технического заключения</p>
+                </p>
+                <p class="price-title">Цена
+                  <p class="price-title__text">1000 Р</p>
+                </p>
+                <div class="price-title__lastTitle">
+                  <div class="price-title__lastText">
+                    <p class="price-title">Срок</p>
+                    <p class="price-title__text">30-120 мин</p>
+                  </div>
+                  <button class="price-btn-order">
+                    <img src="./img/Order.svg" alt="Заказать" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-price">
+              <div class="placeholder-price-mobile">
+                <p class="price-title">Ремонтные услуги
+                  <p class="price-title__text">Диагностика</p>
+                </p>
+                <p class="price-title">Цена
+                  <p class="price-title__text">Бесплатно</p>
+                </p>
+                <div class="price-title__lastTitle">
+                  <div class="price-title__lastText">
+                    <p class="price-title">Срок</p>
+                    <p class="price-title__text">30 мин</p>
+                  </div>
+                  <button class="price-btn-order">
+                    <img src="./img/Order.svg" alt="Заказать" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-price">
+              <div class="placeholder-price-mobile">
+                <p class="price-title">Ремонтные услуги
+                  <p class="price-title__text">Замена дисплея</p>
+                </p>
+                <p class="price-title">Цена
+                  <p class="price-title__text">1000 Р</p>
+                </p>
+                <div class="price-title__lastTitle">
+                  <div class="price-title__lastText">
+                    <p class="price-title">Срок</p>
+                    <p class="price-title__text">30-120 мин</p>
+                  </div>
+                  <button class="price-btn-order">
+                    <img src="./img/Order.svg" alt="Заказать" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-price">
+              <div class="placeholder-price-mobile">
+                <p class="price-title">Ремонтные услуги
+                  <p class="price-title__text">Замена полифонического динамика</p>
+                </p>
+                <p class="price-title">Цена
+                  <p class="price-title__text">1000 Р</p>
+                </p>
+                <div class="price-title__lastTitle">
+                  <div class="price-title__lastText">
+                    <p class="price-title">Срок</p>
+                    <p class="price-title__text">30-120 мин</p>
+                  </div>
+                  <button class="price-btn-order">
+                    <img src="./img/Order.svg" alt="Заказать" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-price">
+              <div class="placeholder-price-mobile">
+                <p class="price-title">Ремонтные услуги
+                  <p class="price-title__text">Замена программного обеспечения</p>
+                </p>
+                <p class="price-title">Цена
+                  <p class="price-title__text">1000 Р</p>
+                </p>
+                <div class="price-title__lastTitle">
+                  <div class="price-title__lastText">
+                    <p class="price-title">Срок</p>
+                    <p class="price-title__text">30-120 мин</p>
+                  </div>
+                  <button class="price-btn-order">
+                    <img src="./img/Order.svg" alt="Заказать" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Дисклеймер -->
+    <div class="disclaimer">
+      <p class="disclaimer__text">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
+      <div class="disclaimer__offer">
+        <a class="disclaimer__offer-link" href="#">Получить коммерческое предложение</a> 
+        <img class="disclaimer__offer-more" src="./img/more.svg" alt="Получить">
+      </div>
+    </div>
+
+    <!-- Подвал -->
+     <footer class="footer">
+      <p class="footer__team">© 2019 CPS<br>
+       Разработано командой Apesong </p>
+       <p class="footer__politics">Политика конфиденциальности</p>
+       <p class="footer__publicOffer">Информация, размещенная на данной странице, не является публичной офертой</p>
+     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>

@@ -1,0 +1,152 @@
+.repair-section {
+  padding-left: 24px;
+  padding-right: 24px;
+  margin: 0 auto;
+  margin-bottom: 45px;
+}
+
+.repair-container {
+  position: relative;
+}
+
+.repair-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.repair-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 224px;
+  height: 160px;
+}
+
+.placeholder-repair {
+  display: block;
+  width: 100%;
+  height: 160px;
+  border-radius: 5px;
+}
+
+.placeholder-repair__text {
+  margin-left: 16px;
+  margin-bottom: 70px;
+}
+
+.repair-btn-more {
+  padding: 0;
+  float: right;
+  margin-right: 15px;
+}
+
+.repair-grid.desktop-layout .repair-item:nth-child(n + 5) {
+  display: none;
+}
+
+.repair-grid.desktop-layout.expanded .repair-item:nth-child(n + 5) {
+  display: flex;
+}
+
+/* Для планшетов */
+@media (max-width: 1020px) {
+  .repair-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .repair-grid.desktop-layout .repair-item:nth-child(n + 4) {
+    display: none;
+  }
+  .repair-grid.desktop-layout.expanded .repair-item:nth-child(n + 4) {
+    display: flex;
+  }
+}
+
+/* Для мобильных - включаем Swiper */
+@media (max-width: 430px) {
+  .header {
+    height: 80px;
+    margin-bottom: 16px;
+  }
+
+  .repair-grid {
+    display: none;
+  }
+
+  .repair-section {
+    padding: 0;
+    padding-left: 16px;
+    margin-bottom: 20px;
+  }
+
+  .repair-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 24px;
+    height: 166px;
+    background: linear-gradient(to right, transparent, white);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .swiper-container-repair {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 210px;
+  }
+
+  .swiper-slide-repair {
+    width: 240px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 15px;
+  }
+
+  .swiper-slide-repair .placeholder-repair {
+    background: #fff;
+    display: block;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .swiper-pagination {
+    position: absolute;
+    left: 58px;
+    top: 10px;
+    background: transparent;
+  }
+
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+    background: #b5b6bc;
+  }
+
+  .show-all,
+  .show-all-btn-repair-svg {
+    display: none;
+  }
+
+  button {
+    background: transparent;
+    border: none;
+  }
+}
+
+@media (min-width: 430px) {
+  .swiper-container-repair {
+    display: none;
+  }
+}

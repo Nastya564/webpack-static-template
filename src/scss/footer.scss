@@ -1,0 +1,27 @@
+.footer {
+  color: #7e7e82;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0;
+  text-align: center;
+  border-top: 1px solid rgba(65, 246, 215, 0.3);
+}
+
+@media (min-width: 760px) {
+  .footer {
+    display: grid;
+    grid-template-columns: 250px 240px 1fr;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .footer__team {
+    text-align: left;
+    margin-left: 30px;
+  }
+
+  .footer__publicOffer {
+    text-align: right;
+    margin-right: 30px;
+  }
+}

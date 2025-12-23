@@ -1,11 +1,10 @@
 @import url('./header.scss');
 @import url('./main.scss');
-
-$bgColor: #f8f8f8;
-$bgElemColor: #fff;
-$borderColor: #b8ffec;
-$textLight: #7e7e82;
-$textDark: #1b1c21;
+@import url('./brands.scss');
+@import url('./repair.scss');
+@import url('./price.scss');
+@import url('./disclaimer.scss');
+@import url('./footer.scss');
 
 @font-face {
   font-family: 'TT Lakes';
@@ -13,9 +12,10 @@ $textDark: #1b1c21;
 }
 
 body {
-  padding: 0;
-  margin: 0;
+  padding: 0 auto;
+  margin: 0 auto;
   font-family: 'TT Lakes', sans-serif;
-  background: $bgColor;
-  color: $textDark;
+  background: #f8f8f8;
+  color: #1b1c21;
+  max-width: 1500px;
 }

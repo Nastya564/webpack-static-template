@@ -1,20 +1,25 @@
-$bgColor: #f8f8f8;
-$bgElemColor: #fff;
-$borderColor: #b8ffec;
-$textLight: #7e7e82;
-$textDark: #1b1c21;
-
 .main__title {
-  width: 304px;
+  width: 260px;
   height: 40px;
   margin: 0;
   margin-top: 24px;
-  margin-left: 16px;
+  padding-left: 24px;
   font-weight: 700;
   font-size: 28px;
   line-height: 40px;
   letter-spacing: -0.6px;
-  border-right: 2px solid #000;
+  position: relative;
+}
+
+.main__title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #41f6d7;
+  border-radius: 0 5px 5px 0;
 }
 
 .main__menu {
@@ -30,7 +35,7 @@ $textDark: #1b1c21;
 .btn-menu {
   background-color: transparent;
   border: none;
-  color: $textLight;
+  color: #7e7e82;
   height: 40px;
   padding-left: 16px;
   padding-right: 16px;
@@ -42,8 +47,8 @@ $textDark: #1b1c21;
 }
 
 .btn-menu:focus {
-  background-color: $bgElemColor;
-  border: 2px solid $borderColor;
+  background-color: #fff;
+  border: 2px solid #b8ffec;
   border-radius: 6px;
 }
 
@@ -52,7 +57,7 @@ $textDark: #1b1c21;
   justify-content: space-around;
   align-items: flex-start;
   margin-top: 24px;
-  margin-bottom: 24px;
+  margin-bottom: 35px;
   padding-left: 24px;
   padding-right: 24px;
   gap: 40px;
@@ -61,7 +66,6 @@ $textDark: #1b1c21;
 .main__info-text {
   overflow: hidden;
   margin: 0;
-
   max-width: 490px;
   height: 160px;
   font-size: 14px;
@@ -101,4 +105,66 @@ $textDark: #1b1c21;
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+}
+
+@media (min-width: 1020px) {
+  .main__header {
+    display: grid;
+    grid-template-columns: 1fr 200px 200px;
+    margin-top: 15px;
+  }
+
+  .main__header-submit,
+  .main__header-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+  }
+
+  .main__menu {
+    overflow: hidden;
+    height: 80px;
+    flex-wrap: wrap;
+  }
+
+  .main__info-picture {
+    height: 307px;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 1020px) {
+  .main__header-submit,
+  .main__header-status {
+    display: none;
+  }
+}
+
+@media (max-width: 590px) {
+  .main__info {
+    display: block;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  .main__container-text {
+    padding: 0 16px;
+  }
+
+  .main__info-text {
+    height: 90px;
+  }
+
+  .conteiner-btn-read-more {
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  .main__info-picture {
+    border-radius: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

@@ -1,0 +1,30 @@
+.disclaimer {
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-bottom: 60px;
+  max-width: 425px;
+}
+
+.disclaimer__text {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+
+.disclaimer__offer {
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.disclaimer__offer-link {
+  color: inherit;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+.disclaimer__offer-more {
+  position: absolute;
+  bottom: 0;
+}
