@@ -28,3 +28,11 @@
   position: absolute;
   bottom: 0;
 }
+
+@media (min-width: 1100px) {
+  .disclaimer {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+}
