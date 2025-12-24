@@ -23,7 +23,7 @@
   padding: 0;
 }
 
-@media (min-width: 1020px) {
+@media (min-width: 1440px) {
   .header {
     display: none;
   }
@@ -92,10 +92,21 @@
   letter-spacing: -0.2px;
 }
 
+.btn-menu:hover {
+  text-shadow: 0 0 10px #fff;
+}
+
 .btn-menu:focus {
   background-color: #fff;
   border: 2px solid #b8ffec;
   border-radius: 6px;
+  cursor: default;
+}
+
+.btn-menu:focus:hover {
+  transition: filter 0.4s ease;
+  filter: none;
+  text-shadow: none;
 }
 
 .main__info {
@@ -147,6 +158,10 @@
   padding: 0;
 }
 
+.main__info-btn-read-more:hover {
+  text-shadow: 0 0 10px #fff;
+}
+
 .main__info-picture {
   max-width: 100%;
   max-height: 100%;
@@ -168,6 +183,11 @@
     margin-top: 25px;
   }
 
+  .main__header-submit:hover,
+  .main__header-status:hover {
+    color: #7e7e82;
+  }
+
   .main__menu {
     overflow: hidden;
     height: 80px;
@@ -180,7 +200,7 @@
   }
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 1440px) {
   .main__header-submit,
   .main__header-status {
     display: none;
@@ -264,6 +284,11 @@
   width: 224px;
 }
 
+.brand-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px 0 #ddd;
+}
+
 .brand-item .placeholder {
   background: #fff;
   width: 100%;
@@ -292,6 +317,10 @@ button {
   color: #1b1c21;
   font-size: 16px;
   padding: 0;
+}
+
+.show-all-btn:hover {
+  text-shadow: 0 0 7px #fff;
 }
 
 .show-all-btn-svg {
@@ -436,6 +465,11 @@ button {
   height: 160px;
 }
 
+.repair-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px 0 #ddd;
+}
+
 .placeholder-repair {
   display: block;
   width: 100%;
@@ -568,7 +602,8 @@ button {
 }
 
 .price-container {
-  width: 1058px;
+  width: 100%;
+  max-width: 1058px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -796,14 +831,6 @@ button {
   bottom: 0;
 }
 
-@media (min-width: 1100px) {
-  .disclaimer {
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-  }
-}
-
 .footer {
   color: #7e7e82;
   font-size: 14px;
@@ -832,17 +859,374 @@ button {
   }
 }
 
+.rectangle {
+  width: 320px;
+  height: 100vh; /* Фиксированная высота экрана */
+  overflow-y: auto; /* Прокрутка содержимого sidebar */
+  overflow-x: hidden; /* Без горизонтальной прокрутки */
+  position: fixed;
+  top: 0;
+  left: -320px; /* Скрыто слева вместо display: none */
+  background-color: #fff;
+  z-index: 950;
+  transition: left 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rectangle.active {
+  left: 0; /* Показывается при добавлении класса active */
+  box-shadow: 0 0 50px 0 #ddd;
+}
+
+.top {
+  display: flex;
+}
+
+.btn-exit {
+  margin-top: 23px;
+  margin-left: 24px;
+  padding: 0;
+}
+
+.logo {
+  margin-top: 19px;
+  margin-left: 17px;
+  cursor: pointer;
+}
+
+.btn-search {
+  margin-top: 23px;
+  margin-left: 78px;
+}
+
+.mainMenu {
+  padding: 0;
+  margin-top: 46px;
+  width: 222px;
+  height: 876px;
+}
+
+.mainMenu__point {
+  margin-bottom: 32px;
+  padding-left: 24px;
+  color: #1b1c21;
+  position: relative;
+  cursor: pointer;
+}
+
+.mainMenu__point::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 32px;
+  background-color: #41f6d7;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 0 10px 10px 0;
+}
+
+.mainMenu__point:hover {
+  color: #7e7e82;
+}
+
+.mainMenu__point:hover::before {
+  opacity: 1;
+}
+
+.mainMenu__contacts {
+  width: 196px;
+  height: 124px;
+  margin-top: 150px;
+  margin-left: 24px;
+}
+
+.btn-chat {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.contacts__phone {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  margin: 0;
+}
+
+.mainMenu__lang {
+  width: 87px;
+  height: 24px;
+  margin-left: 24px;
+  display: flex;
+}
+
+.lang {
+  margin: 0;
+  margin-right: 7px;
+  margin-top: 35px;
+  cursor: pointer;
+}
+
+.lang:hover {
+  color: #7e7e82;
+}
+
+@media (max-height: 880px) {
+  .mainMenu__contacts {
+    margin-top: 70px;
+  }
+}
+
+@media (max-height: 800px) {
+  .mainMenu__contacts {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .rectangle {
+    display: block;
+    left: 0;
+    top: 0;
+    box-shadow: none;
+    overflow: hidden;
+  }
+
+  .btn-exit {
+    display: none;
+  }
+
+  .btn-search {
+    margin-left: 140px;
+  }
+}
+
+@media (max-width: 360px) {
+  .rectangle {
+    width: 100%;
+    max-width: 360px;
+    left: -360px;
+  }
+}
+
+.chat-sidebar {
+  position: fixed;
+  top: 0;
+  right: -540px;
+  width: min(440px, 100%);
+  height: 100vh;
+  transition: right 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+/* состояние «открыт» */
+.chat-sidebar.open {
+  right: 0;
+  box-shadow: 0 0 50px 0 #ddd;
+}
+
+.feedback-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+
+.feedback-close {
+  position: absolute;
+  top: -55px;
+  left: -70px;
+}
+
+.feedback-title {
+  margin: 32px 0 20px;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+  color: #1b1c21;
+  position: relative;
+  padding-left: 25px;
+}
+
+.feedback-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #41f6d7;
+  border-radius: 0 5px 5px 0;
+}
+
+.feedback-input,
+.feedback-textarea {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #eaeaea;
+  margin-bottom: 15px;
+  padding: 10px 12px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  background: #fff;
+  color: #b5b6bc;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.feedback-input::placeholder,
+.feedback-textarea::placeholder {
+  color: #b4b4b8;
+}
+
+/* фокус */
+.feedback-input:focus,
+.feedback-textarea:focus {
+  outline: none;
+  border-color: #ff3e79;
+}
+
+/* текстовое поле побольше */
+.feedback-textarea {
+  resize: none;
+  min-height: 118px;
+}
+
+.feedback-note {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: #b4b4b8;
+}
+
+.feedback-note a {
+  text-decoration: none;
+  color: #ff3e79;
+}
+
+.feedback-submit {
+  position: absolute;
+  right: 30px;
+  top: 400px;
+}
+
+/* На очень маленьких экранах делаем почти полноэкранное модальное окно */
+@media (max-width: 430px) {
+  .chat-sidebar {
+    width: 100%;
+  }
+
+  .feedback-input,
+  .feedback-textarea {
+    max-width: 376px;
+    width: 100%;
+  }
+
+  .feedback-textarea {
+    min-height: 58px;
+  }
+}
+
+@media (max-width: 520px) {
+  .feedback-close {
+    top: -130px;
+    left: 16px;
+  }
+
+  .feedback-title {
+    margin-top: 104px;
+    padding-left: 16px;
+  }
+
+  .feedback-card {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .feedback-note {
+    margin: 0;
+  }
+
+  .feedback-submit {
+    right: 16px;
+    top: 350px;
+  }
+}
+
+@charset "UTF-8";
 @font-face {
   font-family: 'TT Lakes';
   src: url(./fonts/TTLakes-Medium.ttf) format("truetype"); }
 
 body {
   padding: 0 auto;
-  margin: 0 auto;
+  margin: 0;
   font-family: 'TT Lakes', sans-serif;
   background: #f8f8f8;
-  color: #1b1c21;
-  max-width: 1500px; }
+  color: #1b1c21; }
+
+.button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: -webkit-filter 0.2s ease;
+  transition: filter 0.2s ease;
+  transition: filter 0.2s ease, -webkit-filter 0.2s ease;
+  /* Плавное затемнение */ }
+
+.button:hover {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+  /* Темнеет на 20% */ }
+
+.cursor {
+  cursor: pointer;
+  transition: -webkit-filter 0.2s ease;
+  transition: filter 0.2s ease;
+  transition: filter 0.2s ease, -webkit-filter 0.2s ease; }
+
+.cursor:hover {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8); }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  /* Белый с 80% прозрачностью */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 900; }
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible; }
+
+.overlay.active ~ .main-content {
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+  /* Опционально усиливает бледность */ }
+
+@media (min-width: 1440px) {
+  .body__container {
+    margin-left: 320px; } }
 
 
 /*# sourceMappingURL=style.css.map*/
