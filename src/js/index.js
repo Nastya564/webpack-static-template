@@ -86,3 +86,77 @@ btnShow.addEventListener('click', function () {
     svgElemRep.style.transform = 'rotate(180deg)'
   }
 })
+
+// Боковое меню
+const menuBtn = document.getElementById('menu-btn')
+const sidebar = document.getElementById('sidebar')
+const overlay = document.getElementById('overlay')
+const btnExit = document.getElementById('btn-exit') // Кнопка крестика
+
+function openMenu() {
+  sidebar.classList.add('active')
+  overlay.classList.add('active')
+}
+
+function closeMenu() {
+  sidebar.classList.remove('active')
+  overlay.classList.remove('active')
+}
+
+menuBtn.addEventListener('click', (e) => {
+  e.stopPropagation()
+  openMenu()
+})
+
+btnExit.addEventListener('click', (e) => {
+  e.stopPropagation()
+  closeMenu() // Закрытие по крестику
+})
+
+overlay.addEventListener('click', closeMenu)
+
+document.addEventListener('click', (e) => {
+  const isClickInsideSidebar = sidebar.contains(e.target)
+  const isClickOnButton = menuBtn.contains(e.target)
+
+  if (
+    !isClickInsideSidebar &&
+    !isClickOnButton &&
+    sidebar.classList.contains('active')
+  ) {
+    closeMenu()
+  }
+})
+
+// Боковое меню Обратной связи
+const btnChat = document.querySelectorAll('.btn-chat')
+const chatSidebar = document.getElementById('chat-sidebar')
+const chatOverlay = document.getElementById('overlay')
+const chatClose = document.getElementById('chat-close')
+
+function openChat() {
+  chatSidebar.classList.add('open')
+  chatOverlay.classList.add('active')
+}
+
+function closeChat() {
+  chatSidebar.classList.remove('open')
+  chatOverlay.classList.remove('active')
+}
+
+btnChat.forEach((btn) => {
+  btn.addEventListener('click', openChat)
+})
+
+chatClose.addEventListener('click', closeChat)
+
+// Закрытие по клику на фон‑оверлей
+chatOverlay.addEventListener('click', closeChat)
+
+// Дополнительно: закрытие по клику вне карточки (по самому aside)
+chatSidebar.addEventListener('click', (e) => {
+  // если кликнули по фону внутри aside, а не по контенту
+  if (e.target === chatSidebar) {
+    closeChat()
+  }
+})

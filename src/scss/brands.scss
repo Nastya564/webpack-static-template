@@ -47,6 +47,11 @@
   width: 224px;
 }
 
+.brand-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px 0 #ddd;
+}
+
 .brand-item .placeholder {
   background: #fff;
   width: 100%;
@@ -75,6 +80,10 @@ button {
   color: #1b1c21;
   font-size: 16px;
   padding: 0;
+}
+
+.show-all-btn:hover {
+  text-shadow: 0 0 7px #fff;
 }
 
 .show-all-btn-svg {

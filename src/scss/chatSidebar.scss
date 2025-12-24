@@ -1,0 +1,153 @@
+.chat-sidebar {
+  position: fixed;
+  top: 0;
+  right: -540px;
+  width: min(440px, 100%);
+  height: 100vh;
+  transition: right 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+/* состояние «открыт» */
+.chat-sidebar.open {
+  right: 0;
+  box-shadow: 0 0 50px 0 #ddd;
+}
+
+.feedback-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+
+.feedback-close {
+  position: absolute;
+  top: -55px;
+  left: -70px;
+}
+
+.feedback-title {
+  margin: 32px 0 20px;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+  color: #1b1c21;
+  position: relative;
+  padding-left: 25px;
+}
+
+.feedback-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #41f6d7;
+  border-radius: 0 5px 5px 0;
+}
+
+.feedback-input,
+.feedback-textarea {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #eaeaea;
+  margin-bottom: 15px;
+  padding: 10px 12px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  background: #fff;
+  color: #b5b6bc;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.feedback-input::placeholder,
+.feedback-textarea::placeholder {
+  color: #b4b4b8;
+}
+
+/* фокус */
+.feedback-input:focus,
+.feedback-textarea:focus {
+  outline: none;
+  border-color: #ff3e79;
+}
+
+/* текстовое поле побольше */
+.feedback-textarea {
+  resize: none;
+  min-height: 118px;
+}
+
+.feedback-note {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: #b4b4b8;
+}
+
+.feedback-note a {
+  text-decoration: none;
+  color: #ff3e79;
+}
+
+.feedback-submit {
+  position: absolute;
+  right: 30px;
+  top: 400px;
+}
+
+/* На очень маленьких экранах делаем почти полноэкранное модальное окно */
+@media (max-width: 430px) {
+  .chat-sidebar {
+    width: 100%;
+  }
+
+  .feedback-input,
+  .feedback-textarea {
+    max-width: 376px;
+    width: 100%;
+  }
+
+  .feedback-textarea {
+    min-height: 58px;
+  }
+}
+
+@media (max-width: 520px) {
+  .feedback-close {
+    top: -130px;
+    left: 16px;
+  }
+
+  .feedback-title {
+    margin-top: 104px;
+    padding-left: 16px;
+  }
+
+  .feedback-card {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .feedback-note {
+    margin: 0;
+  }
+
+  .feedback-submit {
+    right: 16px;
+    top: 350px;
+  }
+}

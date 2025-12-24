@@ -14,11 +14,81 @@
     <title>WebpackPlugin</title>
   </head>
   <body>
+    <!-- Боковое меню -->
+      <div class="rectangle" id="sidebar">
+        <div class="top">
+        <button class="button btn-exit" id="btn-exit">
+         <img src="./img/exit.svg" alt="Выход">
+        </button>
+        <div class="logo">
+          <img src="./img/Group.svg" alt="CPS">
+        </div>
+        <button class="button btn-search">
+          <img src="./img/search.svg" alt="Поиск">
+        </button>
+      </div>
+      <div class="mainMenu">
+        <p class="mainMenu__point point-repair">Ремонт техники</p>
+        <p class="mainMenu__point point-services">Услуги и сервисы</p>
+        <p class="mainMenu__point point-clients">Корпоративным клиентам</p>
+        <p class="mainMenu__point point-sellers">Продавцам техники</p>
+        <p class="mainMenu__point point-partners">Партнерам</p>
+        <p class="mainMenu__point point-producers">Производителям</p>
+        <p class="mainMenu__point point-centers">Наши сервисные центры</p>
+        <p class="mainMenu__point point-contacts">Контакты</p>
+        <div class="mainMenu__contacts">
+          <button class="button btn-call">
+            <img src="./img/call.svg" alt="Заказать звонок">
+          </button>
+          <button class="button btn-chat" id="btn-chat">
+           <img src="./img/chat.svg" alt="Обратная связь" />
+          </button>
+          <button class="button btn-profile">
+            <img src="./img/profile.svg" alt="Профиль" />
+          </button>
+          <p class="contacts__mail">mail@cps.com</p>
+          <p class="contacts__phone">8 800 890 8900</p>
+        </div>
+        <div class="mainMenu__lang">
+          <p class="lang lang__ru">RU</p>
+          <p class="lang lang__en">EN</p>
+          <p class="lang lang__ch">CH</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Меню Обратная связь -->
+    
+    <div class="chat-sidebar" id="chat-sidebar">
+      <h2 class="feedback-title">Обратная связь</h2>
+      <div class="feedback-card">
+        <button class="feedback-close button" type="button" id="chat-close">
+          <img src="./img/exit.svg" alt="Выход">
+        </button>
+
+          <input type="text" name="name" placeholder="Имя" class="feedback-input">
+          <input type="tel" name="phone" placeholder="Телефон" class="feedback-input">
+          <input type="email" name="email" placeholder="Электронная почта" class="feedback-input">
+          <textarea name="message" placeholder="Сообщение" class="feedback-textarea"></textarea>
+
+          <p class="feedback-note">
+            Нажимая "отправить", вы даете согласие на <a href="#">обработку персональных данных</a>
+            и соглашаетесь с нашей <a href="#">политикой конфиденциальности</a>
+          </p>
+
+          <button class="feedback-submit button" type="submit">
+            <img src="./img/Send.svg" alt="Отправить">
+          </button>
+        
+      </div>
+    </div>
+
+
     <!-- Шапка на планшете/телефоне -->
     <header class="header">
       <div class="header__container">
         <div class="header__left-column">
-          <button class="header__btn-menu header-element">
+          <button class="header__btn-menu header-element button" id="menu-btn">
             <img src="./img/burger.svg" alt="Меню" />
           </button>
           <div class="header__line-one header-element">
@@ -29,55 +99,58 @@
           </a>
         </div>
         <div class="header__right-column">
-          <button class="header__btn-call header-element">
+          <button class="header__btn-call header-element button">
             <img src="./img/call.svg" alt="Заказать звонок" />
           </button>
-          <button class="header__btn-chat header-element">
+          <button class="header__btn-chat btn-chat header-element button">
             <img src="./img/chat.svg" alt="Обратная связь" />
           </button>
-          <button class="header__btn-profile header-element">
+          <button class="header__btn-profile header-element button">
             <img src="./img/profile.svg" alt="Профиль" />
           </button>
-          <div class="header__line-two header-element">
+          <div class="header__line-two header-element button">
             <img src="./img/divider.svg" alt="#" />
           </div>
-          <button class="header__btn-repair header-element">
+          <button class="header__btn-repair header-element button">
             <img src="./img/repair.svg" alt="Оставить заявку" />
           </button>
-          <button class="header__btn-checkstatus header-element">
+          <button class="header__btn-checkstatus header-element button">
             <img src="./img/checkstatus.svg" alt="Статус ремонта" />
           </button>
         </div>
       </div>
     </header>
 
+    <!-- Главный контенер страницы -->
+<div class="body__container">
+
     <!-- Услуги и сервисы -->
     <div class="main">
       <div class="main__container">
         <div class="main__header">
           <h1 class="main__title">Услуги и сервисы</h1>
-          <div class="main__header-submit">Оставить заявку
+          <div class="main__header-submit cursor">Оставить заявку
             <img src="./img/repair.svg" alt="Заявка">
           </div>
-          <div class="main__header-status">Статус ремонта
+          <div class="main__header-status cursor">Статус ремонта
             <img src="./img/checkstatus.svg" alt="Статус">
           </div>
         </div>
         <div class="main__menu">
-          <button class="main__menu-brands btn-menu">
+          <button class="main__menu-brands btn-menu cursor">
             Ремонтируемые бренды
           </button>
-          <button class="main__menu-devices btn-menu">
+          <button class="main__menu-devices btn-menu cursor">
             Ремонтируемые устройства
           </button>
-          <button class="main__menu-prices btn-menu">Цены на услуги</button>
-          <button class="main__menu-address btn-menu">
+          <button class="main__menu-prices btn-menu cursor">Цены на услуги</button>
+          <button class="main__menu-address btn-menu cursor">
             Адреса сервисных центров
           </button>
-          <button class="main__menu-special-price btn-menu">
+          <button class="main__menu-special-price btn-menu cursor">
             Специальные цены
           </button>
-          <button class="main__menu-reviews btn-menu">Отзывы</button>
+          <button class="main__menu-reviews btn-menu cursor">Отзывы</button>
         </div>
         <div class="main__info">
           <div class="main__container-text">
@@ -96,14 +169,14 @@
               deserunt consequuntur incidunt illo natus! In molestias quasi nam
               placeat iusto! Culpa?
             </p>
-            <div class="conteiner-btn-read-more">
+            <div class="conteiner-btn-read-more cursor">
               <img
                 class="btn-read-more-svg"
                 id="btn-read-more-svg"
                 src="./img/expand.svg"
                 alt="more"
               />
-              <button class="main__info-btn-read-more" id="btn-read-more">
+              <button class="main__info-btn-read-more cursor" id="btn-read-more">
                 Читать далее
               </button>
             </div>
@@ -124,7 +197,7 @@
           <div class="brand-item">
             <div class="placeholder">
               <img src="./img/brands/Lenovo.png" alt="Lenovo" />
-              <button>
+              <button class="cursor">
                 <img src="./img/go.svg" alt="Подробнее" />
               </button>
             </div>
@@ -132,7 +205,7 @@
           <div class="brand-item">
             <div class="placeholder">
               <img src="./img/brands/Samsung.png" alt="Samsung" />
-              <button>
+              <button class="cursor">
                 <img src="./img/go.svg" alt="Подробнее" />
               </button>
             </div>
@@ -140,7 +213,7 @@
           <div class="brand-item">
             <div class="placeholder">
               <img src="./img/brands/Apple.png" alt="Apple" />
-              <button>
+              <button class="cursor">
                 <img src="./img/go.svg" alt="Подробнее" />
               </button>
             </div>
@@ -148,7 +221,7 @@
           <div class="brand-item">
             <div class="placeholder">
               <img src="./img/brands/Bosch.png" alt="Bosch" />
-              <button>
+              <button class="cursor">
                 <img src="./img/go.svg" alt="Подробнее" />
               </button>
             </div>
@@ -156,7 +229,7 @@
           <div class="brand-item">
             <div class="placeholder">
               <img src="./img/brands/HP.png" alt="HP" />
-              <button>
+              <button class="cursor">
                 <img src="./img/go.svg" alt="Подробнее" />
               </button>
             </div>
@@ -164,7 +237,7 @@
           <div class="brand-item">
             <div class="placeholder">
               <img src="./img/brands/Acer.png" alt="Acer" />
-              <button>
+              <button class="cursor">
                 <img src="./img/go.svg" alt="Подробнее" />
               </button>
             </div>
@@ -172,7 +245,7 @@
           <div class="brand-item">
             <div class="placeholder">
               <img src="./img/brands/ViewSonic.png" alt="ViewSonic" />
-              <button>
+              <button class="cursor">
                 <img src="./img/go.svg" alt="Подробнее" />
               </button>
             </div>
@@ -180,7 +253,7 @@
           <div class="brand-item">
             <div class="placeholder">
               <img src="./img/brands/Sony.png" alt="Sony" />
-              <button>
+              <button class="cursor">
                 <img src="./img/go.svg" alt="Подробнее" />
               </button>
             </div>
@@ -188,7 +261,7 @@
           <div class="brand-item">
             <div class="placeholder">
               <img src="./img/brands/Lenovo.png" alt="Lenovo" />
-              <button>
+              <button class="cursor">
                 <img src="./img/go.svg" alt="Подробнее" />
               </button>
             </div>
@@ -196,7 +269,7 @@
           <div class="brand-item">
             <div class="placeholder">
               <img src="./img/brands/Samsung.png" alt="Samsung" />
-              <button>
+              <button class="cursor">
                 <img src="./img/go.svg" alt="Подробнее" />
               </button>
             </div>
@@ -204,7 +277,7 @@
           <div class="brand-item">
             <div class="placeholder">
               <img src="./img/brands/Apple.png" alt="Apple" />
-              <button>
+              <button class="cursor">
                 <img src="./img/go.svg" alt="Подробнее" />
               </button>
             </div>
@@ -290,14 +363,14 @@
           <div class="swiper-pagination"></div>
         </div>
       </div>
-      <div class="show-all">
+      <div class="show-all cursor">
         <img
           class="btn-show-all-svg"
           id="btn-show-all-svg"
           src="./img/expand.svg"
           alt="more"
         />
-        <button class="show-all-btn" id="show-all-btn">Показать все</button>
+        <button class="show-all-btn cursor" id="show-all-btn">Показать все</button>
       </div>
     </section>
 
@@ -312,7 +385,7 @@
           <div class="repair-item">
             <div class="placeholder-repair">
               <p class="placeholder-repair__text">Ремонт ноутбуков</p>
-              <button class="repair-btn-more">
+              <button class="repair-btn-more cursor">
                 <img src="./img/go.svg" alt="Подробнее" />
               </button>
             </div>
@@ -320,7 +393,7 @@
           <div class="repair-item">
             <div class="placeholder-repair">
               <p class="placeholder-repair__text">Ремонт планшетов</p>
-              <button class="repair-btn-more">
+              <button class="repair-btn-more cursor">
                 <img src="./img/go.svg" alt="Подробнее" />
               </button>
             </div>
@@ -328,7 +401,7 @@
           <div class="repair-item">
             <div class="placeholder-repair">
               <p class="placeholder-repair__text">Ремонт ПК</p>
-              <button class="repair-btn-more">
+              <button class="repair-btn-more cursor">
                 <img src="./img/go.svg" alt="Подробнее" />
               </button>
             </div>
@@ -336,7 +409,7 @@
           <div class="repair-item">
             <div class="placeholder-repair">
               <p class="placeholder-repair__text">Ремонт мониторов</p>
-              <button class="repair-btn-more">
+              <button class="repair-btn-more cursor">
                 <img src="./img/go.svg" alt="Подробнее" />
               </button>
             </div>
@@ -344,7 +417,7 @@
           <div class="repair-item">
             <div class="placeholder-repair">
               <p class="placeholder-repair__text">Ремонт ноутбуков</p>
-              <button class="repair-btn-more">
+              <button class="repair-btn-more cursor">
                 <img src="./img/go.svg" alt="Подробнее" />
               </button>
             </div>
@@ -352,7 +425,7 @@
           <div class="repair-item">
             <div class="placeholder-repair">
               <p class="placeholder-repair__text">Ремонт планшетов</p>
-              <button class="repair-btn-more">
+              <button class="repair-btn-more cursor">
                 <img src="./img/go.svg" alt="Подробнее" />
               </button>
             </div>
@@ -360,7 +433,7 @@
           <div class="repair-item">
             <div class="placeholder-repair">
               <p class="placeholder-repair__text">Ремонт ПК</p>
-              <button class="repair-btn-more">
+              <button class="repair-btn-more cursor">
                 <img src="./img/go.svg" alt="Подробнее" />
               </button>
             </div>
@@ -368,7 +441,7 @@
           <div class="repair-item">
             <div class="placeholder-repair">
               <p class="placeholder-repair__text">Ремонт мониторов</p>
-              <button class="repair-btn-more">
+              <button class="repair-btn-more cursor">
                 <img src="./img/go.svg" alt="Подробнее" />
               </button>
             </div>
@@ -376,7 +449,7 @@
           <div class="repair-item">
             <div class="placeholder-repair">
               <p class="placeholder-repair__text">Ремонт ноутбуков</p>
-              <button class="repair-btn-more">
+              <button class="repair-btn-more cursor">
                 <img src="./img/go.svg" alt="Подробнее" />
               </button>
             </div>
@@ -384,7 +457,7 @@
           <div class="repair-item">
             <div class="placeholder-repair">
               <p class="placeholder-repair__text">Ремонт планшетов</p>
-              <button class="repair-btn-more">
+              <button class="repair-btn-more cursor">
                 <img src="./img/go.svg" alt="Подробнее" />
               </button>
             </div>
@@ -392,14 +465,14 @@
           <div class="repair-item">
             <div class="placeholder-repair">
               <p class="placeholder-repair__text">Ремонт ПК</p>
-              <button class="repair-btn-more">
+              <button class="repair-btn-more cursor">
                 <img src="./img/go.svg" alt="Подробнее" />
               </button>
             </div>
           </div>
         </div>
 
-        <!-- Мобильная версия Swiper -->
+        <!-- Мобильная версия Swiper видов техники -->
         <div class="swiper-container swiper-container-repair">
           <div class="swiper-wrapper">
             <div class="swiper-slide swiper-slide-repair">
@@ -478,14 +551,14 @@
           <div class="swiper-pagination"></div>
         </div>
       </div>
-      <div class="show-all">
+      <div class="show-all cursor">
         <img
           class="btn-show-all-svg"
           id="btn-show-all-repair-svg"
           src="./img/expand.svg"
           alt="more"
         />
-        <button class="show-all-btn" id="show-all-repair-btn"
+        <button class="show-all-btn cursor" id="show-all-repair-btn"
           >Показать все</button
         >
       </div>
@@ -499,7 +572,6 @@
       <div class="price-container">
         <!-- Десктопная/планшетная версия -->
         <div class="price-grid desktop-layout" id="price-grid">
-
             <div class="price-header">
       <p class="price-header__col">Ремонтные услуги</p>
       <p class="price-header__col">Цена</p>
@@ -512,7 +584,7 @@
               <p class="price-title__text price-title__text-one">Диагностика</p>   
               <p class="price-title__text price-title__text-two">Бесплатно</p>
               <p class="price-title__text price-title__text-three">30 мин</p>
-              <button class="price-btn-order">
+              <button class="price-btn-order button">
                  <img src="./img/Order.svg" alt="Заказать" />
               </button>
             </div>
@@ -522,7 +594,7 @@
               <p class="price-title__text price-title__text-one">Замена дисплея</p>   
               <p class="price-title__text price-title__text-two">1000 Р</p>
               <p class="price-title__text price-title__text-three">30-120 мин</p>
-              <button class="price-btn-order">
+              <button class="price-btn-order button">
                  <img src="./img/Order.svg" alt="Заказать" />
               </button>
             </div>
@@ -532,7 +604,7 @@
               <p class="price-title__text price-title__text-one">Замена полифонического динамика</p>   
               <p class="price-title__text price-title__text-two">1000 Р</p>
               <p class="price-title__text price-title__text-three">30-120 мин</p>
-              <button class="price-btn-order">
+              <button class="price-btn-order button">
                  <img src="./img/Order.svg" alt="Заказать" />
               </button>
             </div>
@@ -542,7 +614,7 @@
               <p class="price-title__text price-title__text-one">Тестирование с выдачей технического заключения</p>   
               <p class="price-title__text price-title__text-two">1000 Р</p>
               <p class="price-title__text price-title__text-three">30-120 мин</p>
-              <button class="price-btn-order">
+              <button class="price-btn-order button">
                  <img src="./img/Order.svg" alt="Заказать" />
               </button>
             </div>
@@ -552,14 +624,14 @@
               <p class="price-title__text price-title__text-one">Замена программного обеспечения</p>   
               <p class="price-title__text price-title__text-two">1000 Р</p>
               <p class="price-title__text price-title__text-three">30-120 мин</p>
-              <button class="price-btn-order">
+              <button class="price-btn-order button">
                  <img src="./img/Order.svg" alt="Заказать" />
               </button>
             </div>
           </div>
         </div>
 
-        <!-- Мобильная версия Swiper -->
+        <!-- Мобильная версия Swiper на прайс-->
         <div class="swiper-container swiper-container-price">
           <div class="swiper-wrapper">
             <div class="swiper-slide swiper-slide-price">
@@ -666,19 +738,21 @@
     <!-- Дисклеймер -->
     <div class="disclaimer">
       <p class="disclaimer__text">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
-      <div class="disclaimer__offer">
+      <div class="disclaimer__offer cursor">
         <a class="disclaimer__offer-link" href="#">Получить коммерческое предложение</a> 
         <img class="disclaimer__offer-more" src="./img/more.svg" alt="Получить">
       </div>
     </div>
 
     <!-- Подвал -->
-     <footer class="footer">
-      <p class="footer__team">© 2019 CPS<br>
-       Разработано командой Apesong </p>
-       <p class="footer__politics">Политика конфиденциальности</p>
-       <p class="footer__publicOffer">Информация, размещенная на данной странице, не является публичной офертой</p>
-     </footer>
+      <footer class="footer">
+        <p class="footer__team">© 2019 CPS<br>
+         Разработано командой Apesong </p>
+        <p class="footer__politics cursor">Политика конфиденциальности</p>
+         <p class="footer__publicOffer">Информация, размещенная на данной странице, не является публичной офертой</p>
+      </footer>
+</div>
+<div id="overlay" class="overlay"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>

@@ -46,10 +46,21 @@
   letter-spacing: -0.2px;
 }
 
+.btn-menu:hover {
+  text-shadow: 0 0 10px #fff;
+}
+
 .btn-menu:focus {
   background-color: #fff;
   border: 2px solid #b8ffec;
   border-radius: 6px;
+  cursor: default;
+}
+
+.btn-menu:focus:hover {
+  transition: filter 0.4s ease;
+  filter: none;
+  text-shadow: none;
 }
 
 .main__info {
@@ -101,6 +112,10 @@
   padding: 0;
 }
 
+.main__info-btn-read-more:hover {
+  text-shadow: 0 0 10px #fff;
+}
+
 .main__info-picture {
   max-width: 100%;
   max-height: 100%;
@@ -122,6 +137,11 @@
     margin-top: 25px;
   }
 
+  .main__header-submit:hover,
+  .main__header-status:hover {
+    color: #7e7e82;
+  }
+
   .main__menu {
     overflow: hidden;
     height: 80px;
@@ -134,7 +154,7 @@
   }
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 1440px) {
   .main__header-submit,
   .main__header-status {
     display: none;

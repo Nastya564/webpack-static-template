@@ -1,0 +1,151 @@
+.rectangle {
+  width: 320px;
+  height: 100vh; /* Фиксированная высота экрана */
+  overflow-y: auto; /* Прокрутка содержимого sidebar */
+  overflow-x: hidden; /* Без горизонтальной прокрутки */
+  position: fixed;
+  top: 0;
+  left: -320px; /* Скрыто слева вместо display: none */
+  background-color: #fff;
+  z-index: 950;
+  transition: left 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rectangle.active {
+  left: 0; /* Показывается при добавлении класса active */
+  box-shadow: 0 0 50px 0 #ddd;
+}
+
+.top {
+  display: flex;
+}
+
+.btn-exit {
+  margin-top: 23px;
+  margin-left: 24px;
+  padding: 0;
+}
+
+.logo {
+  margin-top: 19px;
+  margin-left: 17px;
+  cursor: pointer;
+}
+
+.btn-search {
+  margin-top: 23px;
+  margin-left: 78px;
+}
+
+.mainMenu {
+  padding: 0;
+  margin-top: 46px;
+  width: 222px;
+  height: 876px;
+}
+
+.mainMenu__point {
+  margin-bottom: 32px;
+  padding-left: 24px;
+  color: #1b1c21;
+  position: relative;
+  cursor: pointer;
+}
+
+.mainMenu__point::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 32px;
+  background-color: #41f6d7;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 0 10px 10px 0;
+}
+
+.mainMenu__point:hover {
+  color: #7e7e82;
+}
+
+.mainMenu__point:hover::before {
+  opacity: 1;
+}
+
+.mainMenu__contacts {
+  width: 196px;
+  height: 124px;
+  margin-top: 150px;
+  margin-left: 24px;
+}
+
+.btn-chat {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.contacts__phone {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  margin: 0;
+}
+
+.mainMenu__lang {
+  width: 87px;
+  height: 24px;
+  margin-left: 24px;
+  display: flex;
+}
+
+.lang {
+  margin: 0;
+  margin-right: 7px;
+  margin-top: 35px;
+  cursor: pointer;
+}
+
+.lang:hover {
+  color: #7e7e82;
+}
+
+@media (max-height: 880px) {
+  .mainMenu__contacts {
+    margin-top: 70px;
+  }
+}
+
+@media (max-height: 800px) {
+  .mainMenu__contacts {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .rectangle {
+    display: block;
+    left: 0;
+    top: 0;
+    box-shadow: none;
+    overflow: hidden;
+  }
+
+  .btn-exit {
+    display: none;
+  }
+
+  .btn-search {
+    margin-left: 140px;
+  }
+}
+
+@media (max-width: 360px) {
+  .rectangle {
+    width: 100%;
+    max-width: 360px;
+    left: -360px;
+  }
+}
