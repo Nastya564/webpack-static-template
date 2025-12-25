@@ -7,6 +7,7 @@
 @import url('./footer.scss');
 @import url('./sidebar.scss');
 @import url('./chatSidebar.scss');
+@import url('./callSidebar.scss');
 
 @font-face {
   font-family: 'TT Lakes';
@@ -42,26 +43,28 @@ body {
   filter: brightness(0.8);
 }
 
-.overlay {
+.overlay,
+.overlay-two {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.9); /* Белый с 80% прозрачностью */
+  background: rgba(255, 255, 255, 0.95); /* Белый с 80% прозрачностью */
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease;
   z-index: 900;
 }
 
-.overlay.active {
-  opacity: 1;
-  visibility: visible;
+.overlay-two {
+  z-index: 980;
 }
 
-.overlay.active ~ .main-content {
-  filter: blur(2px); /* Опционально усиливает бледность */
+.overlay.active,
+.overlay-two.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 @media (min-width: 1440px) {

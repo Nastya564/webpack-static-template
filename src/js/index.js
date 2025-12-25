@@ -128,10 +128,10 @@ document.addEventListener('click', (e) => {
   }
 })
 
-// Боковое меню Обратной связи
+// Боковое меню "Обратная связь"
 const btnChat = document.querySelectorAll('.btn-chat')
 const chatSidebar = document.getElementById('chat-sidebar')
-const chatOverlay = document.getElementById('overlay')
+const chatOverlay = document.getElementById('overlay-two')
 const chatClose = document.getElementById('chat-close')
 
 function openChat() {
@@ -158,5 +158,38 @@ chatSidebar.addEventListener('click', (e) => {
   // если кликнули по фону внутри aside, а не по контенту
   if (e.target === chatSidebar) {
     closeChat()
+  }
+})
+
+// Боковое меню "Заказать звонок"
+const btnCallback = document.querySelectorAll('.btn-call')
+const callbackSidebar = document.getElementById('callback-sidebar')
+const callbackOverlay = document.getElementById('overlay-two')
+const callbackClose = document.getElementById('callback-close')
+
+function openCallback() {
+  callbackSidebar.classList.add('open')
+  callbackOverlay.classList.add('active')
+}
+
+function closeCallback() {
+  callbackSidebar.classList.remove('open')
+  callbackOverlay.classList.remove('active')
+}
+
+btnCallback.forEach((btn) => {
+  btn.addEventListener('click', openCallback)
+})
+
+callbackClose.addEventListener('click', closeCallback)
+
+// Закрытие по клику на фон-оверлей
+callbackOverlay.addEventListener('click', closeCallback)
+
+// Дополнительно: закрытие по клику вне карточки (по самому aside)
+callbackSidebar.addEventListener('click', (e) => {
+  // если кликнули по фону внутри aside, а не по контенту
+  if (e.target === callbackSidebar) {
+    closeCallback()
   }
 })
